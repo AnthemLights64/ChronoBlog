@@ -1,0 +1,14 @@
+<a href="/dashboard">&larr; 返回心灵之窗</a>
+<div class="admin-title">
+    <h2>记录梦境</h2>
+</div>
+
+<form action="/add-post" method="POST">
+    <label for="title"><b>梦境题名</b></label>
+    <input type="text" placeholder="梦境题名" name="title" required>
+
+    <label for="body"><b>梦境叙述</b></label>
+    <textarea name="body" cols="50" rows="10" placeholder="在此书写你的梦境故事..." required></textarea>
+
+    <input type="submit" value="发布梦语" class="btn">
+</form>

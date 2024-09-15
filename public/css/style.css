@@ -336,7 +336,7 @@ img {
     line-height: 2;
 }
 
-.admin-post li {
+.admin-posts li {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;

@@ -1,0 +1,17 @@
+<a href="/dashboard">&larr; 返回心灵之窗</a>
+<div class="admin-title">
+    <h2>梦语重塑</h2>
+    <form action="/delete-post/<%= data._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="梦语消散" class="btn-delete btn">
+    </form>
+</div>
+
+<form action="/edit-post/<%= data._id %>?_method=PUT" method="POST">
+    <label for="title"><b>梦境题名</b></label>
+    <input type="text" placeholder="梦境题名" name="title" value="<%= data.title %>" required>
+
+    <label for="body"><b>梦境叙述</b></label>
+    <textarea name="body" cols="50" rows="10" placeholder="在此书写你的梦境故事..." required><%= data.body %></textarea>
+
+    <input type="submit" value="梦语重塑" class="btn">
+</form>
