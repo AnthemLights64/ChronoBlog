@@ -34,7 +34,11 @@ app.use(expressLayout)
 app.set('layout', './layouts/main')
 app.set('view engine', 'ejs')
 
-app.locals.isActiveRoute = isActiveRoute
+app.use((req, res, next) => {
+    res.locals.currentRoute = req.path
+    res.locals.isActiveRoute = (route) => isActiveRoute(route, req.path)
+    next()
+})
 
 app.use('/', require('./server/routes/main'))
 app.use('/', require('./server/routes/admin'))
