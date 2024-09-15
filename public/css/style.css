@@ -146,6 +146,10 @@ img {
     border: 2px solid var(--black);
 }
 
+.searchBtn {
+    cursor: pointer;
+}
+
 /* Header -> Navigation */
 .header__nav ul {
     list-style-type: none;
@@ -271,31 +275,38 @@ img {
 
 /* SearchBar */
 .searchBar {
-    /* visibility: hidden;
-    transform: translateY(-100px); */
+    visibility: hidden;
+    transform: translateY(-100px);
     background-color: var(--black);
     padding: 4px 0;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out, visibility 0s 0.3s;
 }
 
 .searchBar.open {
     transform: translateY(0);
-    transition: transform 0.1s;
+    visibility: visible;
+    transition: transform 0.1s ease-in-out, visibility 0s;
 }
 
 .searchBar input {
     margin: 0;
-    padding: 0;
+    padding: 5px;
+    width: calc(100% - 50px); 
 }
 
 #searchClose {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
     color: var(--gray-light);
     padding: 15px;
+    cursor: pointer;
 }
 
 /* Dashboard Admin */
