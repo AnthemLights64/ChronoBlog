@@ -4,13 +4,13 @@
     <nav class="header__nav">
         <ul>
             <li>
-                <a href="/" class="">起点之居</a>
+                <a href="/" class="<%= isActiveRoute('/', currentRoute) %>">起点之居</a>
             </li>
             <li>
-                <a href="/about" class="">初心物语</a>
+                <a href="/about" class="<%= isActiveRoute('/about', currentRoute) %>">初心物语</a>
             </li>
             <li>
-                <a href="/contact" class="">联络之窗</a>
+                <a href="/contact" class="<%= isActiveRoute('/contact', currentRoute) %>">联络之窗</a>
             </li>
         </ul>
     </nav>
