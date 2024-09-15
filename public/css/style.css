@@ -1,6 +1,6 @@
 @font-face {
     font-family: Roboto;
-    src: url('/fonts/Roboto/MaShanZheng-Regular.ttf') format('truetype');
+    src: url('/fonts/MaShanZheng/MaShanZheng-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -267,4 +267,66 @@ img {
 .footer {
     margin: 4rem;
     text-align: center;
+}
+
+/* SearchBar */
+.searchBar {
+    /* visibility: hidden;
+    transform: translateY(-100px); */
+    background-color: var(--black);
+    padding: 4px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.searchBar.open {
+    transform: translateY(0);
+    transition: transform 0.1s;
+}
+
+.searchBar input {
+    margin: 0;
+    padding: 0;
+}
+
+#searchClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--gray-light);
+    padding: 15px;
+}
+
+/* Dashboard Admin */
+.admin-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-posts {
+    padding: 0;
+    margin: 0;
+}
+
+.admin-post-controls form {
+    display: inline-block;
+}
+
+.admin-post-controls .btn {
+    display: inline-block;
+    background-color: var(--black);
+    color: var(--gray-light);
+    border: 0;
+    text-decoration: none;
+    font-size: .8rem;
+    padding: 4px 8px;
+    line-height: 2;
+}
+
+.admin-post li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
 }
