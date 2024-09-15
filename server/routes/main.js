@@ -10,7 +10,7 @@ router.get('', async (req, res) => {
     try {
         const locals = {
             title: 'Chrono Blog',
-            description: 'Simple Blog created with NodeJS, Express & MongoDb.'
+            description: '在这里，我们用文字谱写心灵的乐章，探索思想的深度与广度。'
         }
 
         let perPage = 10
@@ -50,7 +50,7 @@ router.get('/post/:id', async (req, res) => {
 
         const locals = {
             title: data.title,
-            description: 'Simple Blog created with NodeJS, Express & MongoDb.'
+            description: '在这里，我们用文字谱写心灵的乐章，探索思想的深度与广度。'
         }
 
         res.render('post', { locals, data })
@@ -66,8 +66,8 @@ router.get('/post/:id', async (req, res) => {
 router.post('/search', async (req, res) => {
     try {
         const locals = {
-            title: "Search",
-            description: 'Simple Blog created with NodeJS, Express & MongoDb.'
+            title: "寻觅之窗",
+            description: '在这里，我们用文字谱写心灵的乐章，探索思想的深度与广度。'
         }
         let searchTerm = req.body.searchTerm
         // const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9 ]/g, "")
